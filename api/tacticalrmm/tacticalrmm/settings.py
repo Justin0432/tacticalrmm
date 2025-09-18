@@ -39,6 +39,12 @@ MESH_VER = "1.1.32"
 
 NATS_SERVER_VER = "2.11.8"
 
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_PROXY_SSL_HEADER = None
+
+
 # Install Nushell on the agent
 # https://github.com/nushell/nushell
 INSTALL_NUSHELL = True
@@ -118,8 +124,8 @@ SWAGGER_ENABLED = False
 REDIS_HOST = "127.0.0.1"
 TRMM_LOG_LEVEL = "ERROR"
 TRMM_LOG_TO = "file"
-TRMM_PROTO = "https"
-TRMM_BACKEND_PORT = None
+TRMM_PROTO = "http"
+TRMM_BACKEND_PORT = 8000
 
 if not DOCKER_BUILD:
     ALLOWED_HOSTS = []
